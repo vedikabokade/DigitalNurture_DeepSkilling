@@ -1,11 +1,11 @@
-public class Product {
+public class Product1 {
 
     private int productId;
     private String productName;
     private int quantity;
     private double price;
 
-    public Product(int productId, String productName, int quantity, double price) {
+    public Product1(int productId, String productName, int quantity, double price) {
         this.productId = productId;
         this.productName = productName;
         this.quantity = quantity;

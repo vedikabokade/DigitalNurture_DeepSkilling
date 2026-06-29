@@ -2,14 +2,14 @@ import java.util.HashMap;
 
 public class InventoryManagementSystem {
 
-    private HashMap<Integer, Product> inventory;
+    private HashMap<Integer, Product1> inventory;
 
     public InventoryManagementSystem() {
         inventory = new HashMap<>();
     }
 
     // Add Product
-    public void addProduct(Product product) {
+    public void addProduct(Product1 product) {
         inventory.put(product.getProductId(), product);
         System.out.println("Product Added Successfully.");
     }
@@ -19,7 +19,7 @@ public class InventoryManagementSystem {
 
         if (inventory.containsKey(id)) {
 
-            Product product = inventory.get(id);
+            Product1 product = inventory.get(id);
 
             product.setProductName(name);
             product.setQuantity(quantity);
@@ -61,7 +61,7 @@ public class InventoryManagementSystem {
 
             System.out.println("\nInventory:");
 
-            for (Product product : inventory.values()) {
+            for (Product1 product : inventory.values()) {
 
                 System.out.println(product);
 
@@ -73,9 +73,9 @@ public class InventoryManagementSystem {
 
         InventoryManagementSystem ims = new InventoryManagementSystem();
 
-        ims.addProduct(new Product(101, "Laptop", 20, 65000));
-        ims.addProduct(new Product(102, "Mouse", 150, 600));
-        ims.addProduct(new Product(103, "Keyboard", 75, 1200));
+        ims.addProduct(new Product1(101, "Laptop", 20, 65000));
+        ims.addProduct(new Product1(102, "Mouse", 150, 600));
+        ims.addProduct(new Product1(103, "Keyboard", 75, 1200));
 
         ims.displayInventory();
 
